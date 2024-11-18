@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="images/miku-icon.jpg" href="images/miku-icon.jpg">
+    <title>Miku' Contact</title>
+</head>
+
+<body>
+
+    <div id="Contact" class="big-bg">
+
+        <header class="page-header wrapper">
+            <h1><a href="index.html"><img class="logo" src="images/miku-logo33.png"></a></h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="History.html">History</a></li>
+                    <li><a href="Character.html">Chracter</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+
+
+        </header>
+
+        <div class="wrapper">
+            <div class="boxcontact">
+                <h2 class="page-title">Contact</h2>
+                <form action="#" method="post" id="myForm" name="DataMiku" >
+                    <div>
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="your-name">
+                    </div>
+                    <div>
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="your-email">
+                    </div>
+                    <div>
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" name="your-message"></textarea> 
+                    </div>
+                    <input type="submit" class="msgbutton" value="送信" name="submit">
+    
+                </form>
+            </div>
+
+        </div>
+
+
+        
+    </div>
+    <section id="location">
+        <div class="wrapper">
+            <div class="location-info">
+                <h3 class="sub-title">著者の居場所</h3>
+                <p>
+                    住所: 上海市水丰路100号<br>
+                    電話: 15549482180<br>
+                    メール: 540724180@qq.com  <br>
+                </P>
+            </div>
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.7663908554694!2d121.54170685826361!3d31.282568483199093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b274069bfd8093%3A0x2ced56bba156971a!2z5Lit5Zu95LiK5rW35biC5p2o5rWm5Yy65rC05Liw6LevMTAw5Y-3IOmCruaUv-e8lueggTogMjAwMDkz!5e0!3m2!1szh-CN!2sus!4v1683385871561!5m2!1szh-CN!2sus" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            </div>
+
+    </section>
+
+    <section id="sns">
+        <div class="wrapper">
+            <div class="sns-box">
+                <h3 class="sub-title">Bilibili</h3>
+                <iframe class="sub-content" width="560" height="355" src="https://player.bilibili.com/player.html?aid=30748239&bvid=BV1nW411f7LK&cid=53673679&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>            </div>
+            <div class="sns-box">
+                <h3 class="sub-title">Twitter</h3>
+                <blockquote  class="twitter-tweet"><p lang="ja" dir="ltr">青空と白雲は誰でも拒めないなぁ§(*￣▽￣*)§ <a href="https://t.co/Fj6JjpRI9T">pic.twitter.com/Fj6JjpRI9T</a></p>&mdash; Fish_head (@thank_ice) <a href="https://twitter.com/thank_ice/status/1417706249525731339?ref_src=twsrc%5Etfw">July 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </div>
+            <div class="sns-box">
+                <h3 class="sub-title">Youtube</h3>
+                <iframe class="sub-content" width="560" height="355" src="https://www.youtube.com/embed/P9gFVBajQTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2023 Miku'WEBSITE Desgin by Fish_head</small></p>
+        </div>
+    </footer>
+
+
+
+    <script ty="text/javascript">
+        const scriptURL='https://script.google.com/macros/s/AKfycbyn46e73rAn7B-cRNOtxddSb-x3HdL7-vdbjT9floOCGnYTDiWOKSUZ-7wm6JfMbqUYNw/exec';
+        const form = document.forms['DataMiku'];
+
+
+        //关闭表单输入记录 .autocomplete
+        document.getElementById("myForm").autocomplete="off";
+
+        function clearForm(){
+            document.getElementById("myForm").reset();
+        }
+        
+        
+          
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+           
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response =>{
+                alert("You have successfully submitted.");
+                clearForm();
+                
+                
+              
+
+              } )
+                
+              .catch(error => console.error('Error!', error.message))
+            
+           
+              
+          })
+
+        
+
+    </script>
+
+
+
+</body>
+</html>
